@@ -12,5 +12,13 @@
  * @return {boolean}
  */
 function anagram(first, second) {
-
+    var sort = function(str) {
+        return str.replace(/\s+/g, '').split('').sort().join('').toLowerCase();
+      }
+      
+    
+        return first.trim() === second.trim() ? false : sort(first) === sort(second) ;
+      
+      
 }
+console.log(anagram('Statue of Liberty', 'Built to stay free'))
