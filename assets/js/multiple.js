@@ -14,6 +14,11 @@
 
 function multiple(a, b) {
 var c=0;
+if(b<0);
+{
+    b=Math.abs(b)
+    a=-a
+}
 for(let i=0;i<b;i++)
 {
     c+=a;
@@ -22,4 +27,5 @@ return c;
 
 }
 console.log(multiple(2,4));
+console.log(multiple(2,-4));
 
