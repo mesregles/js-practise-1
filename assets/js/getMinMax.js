@@ -15,5 +15,7 @@
  * @return {{min: number, max: number}} объект с минимумом и максимумом
  */
 function getMinMax(input) {
-
+    let pattern = '/\d./g';
+    let arr = input.search(pattern);
+    
 }

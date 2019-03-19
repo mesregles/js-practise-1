@@ -19,5 +19,20 @@
  * @return {Function}
  */
 function limitCalls(fn, maxCalls) {
-
+    for (let j=0;j<maxCalls;j++)
+    {
+    Put();
+    }
+var result;
+return function()
+{
+if(fn)
+{
+result = fn.apply(context||this,arguments);
+fn=null;    
 }
+return result; 
+};
+}
+var max = 4;
+console.log(limitCalls(Put,max));
